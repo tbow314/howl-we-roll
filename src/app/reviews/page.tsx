@@ -171,16 +171,6 @@ export default function ReviewsPage() {
         </ScrollReveal>
       </section>
 
-      {/* Sample Reviews Notice */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
-        <div className="bg-gold/10 border border-gold/20 rounded-xl px-6 py-4 text-center">
-          <p className="font-body text-dark/60 text-sm">
-            <span className="font-semibold text-dark/80">Note:</span> The reviews below represent the kind of feedback Christine receives.
-            Real Google &amp; Facebook reviews will be displayed here once connected.
-          </p>
-        </div>
-      </section>
-
       {/* Review Grid */}
       <section className="pb-16 sm:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

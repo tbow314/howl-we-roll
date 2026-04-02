@@ -360,7 +360,7 @@ export default function HomePage() {
               suffix="+"
               label="Happy Pets Groomed"
             />
-            <AnimatedCounter end={3} suffix=".9" label="Google Rating" />
+            <AnimatedCounter end={39} divisor={10} label="Google Rating" />
             <AnimatedCounter end={100} suffix="%" label="Facebook Recommend" />
           </div>
         </div>
@@ -634,9 +634,6 @@ export default function HomePage() {
               </h2>
               <p className="font-body text-white/60 mt-3 max-w-lg mx-auto">
                 3.9 stars on Google &middot; 100% recommended on Facebook &middot; BBB Accredited
-              </p>
-              <p className="font-body text-white/40 mt-2 text-xs">
-                Sample reviews shown &mdash; real reviews will be connected at launch
               </p>
             </div>
 
