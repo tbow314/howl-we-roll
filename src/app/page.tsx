@@ -243,55 +243,53 @@ export default function HomePage() {
       />
 
       {/* ===== HERO ===== */}
-      <section className="relative bg-cream overflow-hidden">
-        {/* Decorative background shapes */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-forest/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4 pointer-events-none" />
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Full-bleed background image */}
+        <Image
+          src="/images/christine-van.png"
+          alt="Howl We Roll mobile pet grooming van in Canonsburg PA"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/85 via-dark/70 to-dark/40" />
+        {/* Gold accent line at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-gold-light to-transparent" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left — Copy */}
-            <div className="max-w-xl">
-              <div className="inline-flex items-center gap-2 bg-forest/10 text-forest font-accent font-semibold text-sm tracking-wide uppercase px-4 py-2 rounded-full mb-6">
-                <span className="w-2 h-2 bg-forest rounded-full animate-pulse" />
-                Mobile Pet Grooming &bull; Canonsburg &amp; Pittsburgh Suburbs
-              </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white/90 font-accent font-semibold text-sm tracking-wide uppercase px-4 py-2 rounded-full mb-6 border border-white/10">
+              <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+              Canonsburg &bull; Cecil Township &bull; Pittsburgh Suburbs
+            </div>
 
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-dark leading-[1.1] mb-5">
-                Mobile Dog &amp; Cat Grooming in{" "}
-                <span className="text-gradient">Canonsburg, PA</span>
-              </h1>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-6">
+              We Come to You.{" "}
+              <span className="block text-gold mt-2">Your Pet Stays Home.</span>
+            </h1>
 
-              <p className="font-body text-lg sm:text-xl text-dark/70 leading-relaxed mb-4">
-                20+ years of professional grooming experience&nbsp;&mdash; now I
-                come to you.
-              </p>
+            <p className="font-body text-lg sm:text-xl text-white/80 leading-relaxed mb-3 max-w-lg">
+              Professional mobile dog &amp; cat grooming with 20+ years of experience. One-on-one care in our fully equipped van&nbsp;&mdash; right in your driveway.
+            </p>
 
-              <p className="font-accent italic text-gold text-lg mb-8">
-                &ldquo;Squeaky clean from pawz to schnawz&rdquo;
-              </p>
+            <p className="font-accent italic text-gold-light text-lg mb-8">
+              &ldquo;Squeaky clean from pawz to schnawz&rdquo;
+            </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <Link
-                  href="/book"
-                  className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-white font-semibold px-8 py-4 rounded-full text-base transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 animate-pulse-glow"
-                >
-                  Book Your Appointment
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center border-2 border-forest text-forest hover:bg-forest hover:text-white font-semibold px-8 py-4 rounded-full text-base transition-all duration-300"
-                >
-                  See Pricing
-                </Link>
-              </div>
-
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Link
+                href="/book"
+                className="inline-flex items-center justify-center bg-gold hover:bg-gold-light text-white font-semibold px-8 py-4 rounded-full text-base transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 animate-pulse-glow"
+              >
+                Book Your Appointment
+              </Link>
               <a
                 href="tel:7248981988"
-                className="inline-flex items-center gap-2 text-forest font-semibold text-lg group mb-6"
+                className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 font-semibold px-8 py-4 rounded-full text-base transition-all duration-300"
               >
                 <svg
-                  className="w-5 h-5 group-hover:scale-110 transition-transform"
+                  className="w-5 h-5 mr-2"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth={2}
@@ -303,53 +301,50 @@ export default function HomePage() {
                     d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
                   />
                 </svg>
-                Or call 724-898-1988
+                Call 724-898-1988
               </a>
-
-              <div className="flex items-center gap-2 bg-gold/10 border border-gold/20 rounded-full px-4 py-2 w-fit">
-                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                <p className="font-accent text-sm font-semibold text-dark/80">
-                  Limited availability&nbsp;&mdash; only 4 slots left this week
-                </p>
-              </div>
             </div>
 
-            {/* Right — Hero Image */}
-            <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gold/20">
-                <Image
-                  src="/images/lab-portrait.jpg"
-                  alt="Happy yellow Labrador after a professional mobile grooming session by Howl We Roll in Canonsburg PA"
-                  width={700}
-                  height={525}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl px-5 py-3 border border-gold/15 animate-float">
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className="w-4 h-4 text-gold"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z" />
-                      </svg>
-                    ))}
+            {/* Photo strip */}
+            <div className="flex items-center gap-4">
+              <div className="flex -space-x-3">
+                {[
+                  { src: "/images/lab-portrait.jpg", alt: "Happy groomed Labrador" },
+                  { src: "/images/cocker-spaniels.jpg", alt: "Groomed Cocker Spaniels" },
+                  { src: "/images/cat-grooming.jpg", alt: "Cat being groomed" },
+                  { src: "/images/christine-grooming.png", alt: "Christine grooming a dog" },
+                ].map((img, i) => (
+                  <div
+                    key={i}
+                    className="w-11 h-11 rounded-full border-2 border-white/30 overflow-hidden"
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      width={44}
+                      height={44}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <span className="font-accent text-sm font-bold text-dark">
-                    5.0
-                  </span>
-                  <span className="text-dark/50 text-xs">Google Rating</span>
-                </div>
+                ))}
               </div>
-              {/* Decorative accents */}
-              <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-gold/10 rounded-full blur-2xl pointer-events-none" />
-              <div className="absolute -top-6 -left-6 w-36 h-36 bg-forest/5 rounded-full blur-3xl pointer-events-none" />
+              <div>
+                <div className="flex gap-0.5 mb-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className="w-3.5 h-3.5 text-gold"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-white/60 text-xs font-accent">
+                  1,000+ happy pets groomed
+                </p>
+              </div>
             </div>
           </div>
         </div>
