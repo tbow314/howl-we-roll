@@ -244,14 +244,27 @@ export default function HomePage() {
 
       {/* ===== HERO ===== */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Full-bleed background image */}
-        <Image
-          src="/images/christine-van.png"
-          alt="Howl We Roll mobile pet grooming van in Canonsburg PA"
-          fill
-          className="object-cover object-center"
-          priority
-        />
+        {/* Background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/christine-van.png"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        {/* Fallback image for no-JS / slow connections */}
+        <noscript>
+          <Image
+            src="/images/christine-van.png"
+            alt="Howl We Roll mobile pet grooming van in Canonsburg PA"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </noscript>
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-dark/85 via-dark/70 to-dark/40" />
         {/* Gold accent line at bottom */}
